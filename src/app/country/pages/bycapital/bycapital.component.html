@@ -1,0 +1,9 @@
+<!--country-search-input-->
+<app-search-input (searchValue)="query.set($event)" placeholder="Buscar por capital"/>
+
+<!-- country-table -->
+<app-countrylist [countries]="countryResource.value() ?? []"
+[errorMessage]="countryResource.error()" 
+[isEmpty]="countryResource.value()?.length === 0" 
+[isLoading]="countryResource.isLoading()"
+/>

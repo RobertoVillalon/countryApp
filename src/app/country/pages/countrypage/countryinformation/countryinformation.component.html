@@ -1,0 +1,31 @@
+
+<section class="flex flex-col justify-center mx-40">
+    <div class="stats shadow">
+        <div class="stat">
+            <div class="stat-figure text-secondary">
+              <div class="avatar online">
+                <div class="w-16 rounded-full">
+                  <img [src]="country().flagSvg" [alt]="country().name"/>
+                </div>
+              </div>
+            </div>
+            <div class="stat-title">Name</div>
+            <div class="stat-value text-primary">{{country().name}}</div>
+        </div>
+        <div class="stat">
+          <div class="stat-figure text-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0-8 0M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/></svg>
+          </div>
+          <div class="stat-title">Total population</div>
+          <div class="stat-value text-primary">{{country().population | number}}</div>
+        </div>
+      
+        <div class="stat">
+          <div class="stat-figure text-secondary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m21 3l-6.5 18a.55.55 0 0 1-1 0L10 14l-7-3.5a.55.55 0 0 1 0-1z"/></svg>
+          </div>
+          <div class="stat-title">Capital</div>
+          <div class="stat-value text-secondary">{{country().capital}}</div>
+        </div>
+    </div>
+</section>
