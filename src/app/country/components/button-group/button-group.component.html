@@ -1,0 +1,7 @@
+<section class="flex flex-row gap-2 mt-2">
+     @for (item of group(); track item){
+        <button class="btn btn-outline" (click)="handleSelection(item)" [class.btn-primary]="item === alternativeSelected()">
+            {{item}}
+        </button>
+     }
+</section>

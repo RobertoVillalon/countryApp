@@ -9,7 +9,7 @@ export default class CountryMapper{
             flag: data.flag,
             flagSvg: data.flags.svg,
             name: data.translations['spa'].common ?? 'no name',
-            capital: data.capital.join(','),
+            capital: data.capital?.join(','),
             population: data.population
         
         }
